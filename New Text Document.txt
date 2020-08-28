@@ -1,0 +1,44 @@
+location id 	     location Name 		branch name 		floor no 
+L0001			BLR					BTM					F1
+L0002			BLR					BTM					F2
+L0003			BLR					BTM					F3
+
+
+
+
+
+Select * from employee_tbl;
+
+INSERT INTO employee_tbl VALUES( 1, "Techonology", "ramgopal@gmail.com", "Ram Gopal", "123abc", "NULL");
+INSERT INTO employee_tbl VALUES( 2, "Management", "rajarabishkumar@gmail.com", "Raja Rabish Kumar", "@abc", "NULL");
+INSERT INTO employee_tbl VALUES( 3, "HR", "bachanji@gmail.com", "Bol Bachan", "ram@20", "NULL");
+INSERT INTO employee_tbl VALUES( 4, "Delivery", "sas@gmail.com", "Sunny Singh", "humming_hum", "NULL");
+INSERT INTO employee_tbl VALUES( 5, "Techonology", "flyingbeast@gmail.com", "Prabhakar kumar", "angel123", "NULL");
+INSERT INTO employee_tbl VALUES( 6, "HR", "writetovatsa@gmail.com", "Neeraj Vatsa", "Bird@fly", "NULL");
+INSERT INTO employee_tbl VALUES( 7, "Management", "babuthelegend@yahoo.com", "Babu Bhaiya", "KingOfKing", "NULL");
+INSERT INTO employee_tbl VALUES( 8, "Delivery", "deepusinghemail@gmail.com", "Raju H P", "Jungle@Book123", "NULL");
+
+select * from seat_tbl;
+
+Insert into seat_tbl values( 11111, '1A');
+Insert into seat_tbl values( 11112, '1B');
+Insert into seat_tbl values( 11113, '1C');
+Insert into seat_tbl values( 11114, '1D');
+
+
+
+DB--------->COMPONENT----------->TEMPLATE(HTML) ----->dATA BINDING TWO WAAY <------HTML ---- C0MPONENT-----DB.
+
+
+
+"emailId": "tara@gmail.com",
+   
+    "password": "1234"
+}
+
+
+
+
+How we are going to implenment seat?
+
+Logical part ;

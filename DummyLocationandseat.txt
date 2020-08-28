@@ -1,0 +1,140 @@
+create table location(
+   location_id INT NOT NULL ,
+   location_name VARCHAR(255) NOT NULL,
+   PRIMARY KEY ( location_id )
+);
+
+Insert into location values( 1001, 'Banglore');
+Insert into location values( 1002, 'Dubai');
+Insert into location values( 1003, 'Delhi');
+
+create table branch(
+   branch_id INT NOT NULL ,
+   location_id INT NOT NULL ,
+   branch_name VARCHAR(255) NOT NULL,
+   total_floors int not null,
+   PRIMARY KEY ( branch_id )
+);
+
+Insert into branch values(2001,'BTM Layout', 3, 1001);
+Insert into branch values(2002,'Rajajinagar', 2, 1001);
+Insert into branch values(2003,'Jumeirah', 2, 1002);
+Insert into branch values(2004,'Deira', 3, 1002);
+Insert into branch values(2005,'Janakpuri', 1, 1003);
+
+
+
+Insert into branch values(2002, 1001, 'Rajajinagar',2);
+Insert into branch values(2003, 1002, 'Jumeirah',2);
+Insert into branch values(2004, 1002, 'Deira',4);
+Insert into branch values(2005, 1003, 'Janakpuri',1);
+
+
+create table floor_details(
+   floor_id INT NOT NULL ,
+   branch_id INT NOT NULL ,
+   floor_no int NOT NULL,
+   total_seats int ,
+   booked_seats int ,
+   available_seats int,
+   PRIMARY KEY ( floor_id )
+);
+
+
+insert into floor_details  values (3001,2001,1);
+insert into floor_details  values (3002,2001,2);
+insert into floor_details  values (3003,2001,3);
+insert into floor_details  values (3004,2002,1);
+insert into floor_details  values (3005,2002,2);
+insert into floor_details  values (3006,2003,1);
+insert into floor_details  values (3007,2003,2);
+insert into floor_details  values (3008,2004,1);
+insert into floor_details  values (3009,2004,2);
+insert into floor_details  values (3010,2004,3);
+insert into floor_details  values (3011,2004,4);
+insert into floor_details  values (3012,2005,1);
+
+
+
+create table order_info(
+   booking_id INT NOT NULL ,
+   location_name varchar (255),
+   branch_name varchar(255),
+   floor_no int ,
+   seat_no int,
+   status varchar(255),
+   PRIMARY KEY ( booking_id )
+);
+///////////////////////////////////////////////////////////////////////////
+
+ALTER TABLE branch   ADD  CONSTRAINT FK_branchlocation FOREIGN KEY(location_id)
+REFERENCES location (location_id)
+ 
+
+ALTER TABLE floor_details  ADD  CONSTRAINT FK_floor_detailsbranch FOREIGN KEY(branch_id)
+REFERENCES branch (branch_id)
+
+ALTER TABLE seat_tbl  ADD  CONSTRAINT FK_seat_tblfloor_details FOREIGN KEY(floor_id)
+REFERENCES floor_details(floor_id);
+
+//////////////////////////////////////////////////////////////////////////
+seat tbl;
+
+seatid floor id status
+
+insert into seat_tbl values (9001,3001,'1A' ,'Booked');
+insert into seat_tbl values (9002,3001, '1B','available');
+insert into seat_tbl values (9003,3001,'1C' ,'Booked');
+insert into seat_tbl values (9004,3001, '1D', 'Booked');
+insert into seat_tbl values (9005,3001, '1E','available');
+insert into seat_tbl values (9006,3001, '1F','Booked');
+insert into seat_tbl values (9007,3001,'1G' ,'Booked');
+insert into seat_tbl values (9008,3001,'1H' ,'available');
+insert into seat_tbl values (9009,3001,'1I' ,'Booked');
+insert into seat_tbl values (9010,3001, '1J','available');
+insert into seat_tbl values (9011,3001,'1K' ,'Booked');
+insert into seat_tbl values (9012,3001, '1L','available');
+insert into seat_tbl values (9013,3001, '1M','Booked');
+insert into seat_tbl values (9014,3001, '1P','available');
+insert into seat_tbl values (9015,3001,'1Q' ,'Booked');
+insert into seat_tbl values (9016,3002, '2A','available');
+insert into seat_tbl values (9017,3002, '2B','available');
+insert into seat_tbl values (9018,3002, '2C' ,'Booked');
+insert into seat_tbl values (9019,3002, '2D','Booked');
+insert into seat_tbl values (9020,3002,'2E' ,'available');
+insert into seat_tbl values (9021,3002,'2F' ,'available');
+insert into seat_tbl values (9022,3002,'2G' ,'available');
+insert into seat_tbl values (9023,3002,'2H'  ,'Booked');
+insert into seat_tbl values (9024,3002, '2I' ,'available');
+insert into seat_tbl values (9025,3002,'2J' ,'Booked');
+insert into seat_tbl values (9026,3002, '2K','available');
+insert into seat_tbl values (9027,3002, '2L','available');
+insert into seat_tbl values (9028,3002, '2M','Booked');
+insert into seat_tbl values (9029,3002, '2N','available');
+insert into seat_tbl values (9030,3002, '2P','available');
+insert into seat_tbl values (9031,3003, '3A','available');
+insert into seat_tbl values (9032,3003,'3B' ,'Booked');
+insert into seat_tbl values (9033,3003, '3C','available');
+insert into seat_tbl values (9034,3003, '3D','Booked');
+insert into seat_tbl values (9035,3003, '3E','available');
+insert into seat_tbl values (9036,3003,  '3F','available');
+insert into seat_tbl values (9037,3003, '3G','Booked');
+insert into seat_tbl values (9038,3003,  '3H','available');
+insert into seat_tbl values (9039,3003, '3I' ,'available');
+insert into seat_tbl values (9040,3003, '3J' ,'available');
+insert into seat_tbl values (9041,3003,'3K' ,'available');
+
+
+
+//////////////
+//
+
+let seat of seatDetailsList |slice:(row*seatArrangement.columns)-3:(row*seatArrangement.columns)"let seat of seatDetailsList |slice:(row*seatArrangement.columns)-3:(row*seatArrangement.columns)"
+
+
+let row of rows
+
+*ngFor=""
+
+
+bookingId, seatId, statusOfBooking, employeeData
